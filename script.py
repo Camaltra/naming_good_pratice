@@ -16,10 +16,10 @@ def decision(array):
         if elem.schle:
             if elem.type == type:
                 if elem.yr >= recent:
-                    a.append(e)
+                    a.append(elem)
             else:
                 if elem.strs == 5:
-                    a.append(e)
+                    a.append(elem)
 
     a = sorted(a, key=lambda x: x.yr, reverse=True)
 
