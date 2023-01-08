@@ -31,7 +31,7 @@ def get_selected_movie_type() -> str:
             print(f"Bad film genre, please choose one in the managed movie type")
 
 
-def choose_movie_to_watch(movies: list[Movie]):
+def choose_movie_to_watch(movies: list[Movie]) -> Movie:
     selected_type = get_selected_movie_type()
 
     filtered_movies = get_filtered_movies(movies, selected_type)
@@ -48,7 +48,6 @@ def choose_movie_to_watch(movies: list[Movie]):
 
 def main():
     movies = get_movies_from_db()
-
     movie_to_watch = choose_movie_to_watch(movies)
 
     # The function can continue
