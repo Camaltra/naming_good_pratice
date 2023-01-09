@@ -5,10 +5,12 @@ class Movie:
         director: str,
         release_year_date: int,
         type=None,
-        schedules: list = [],
+        schedules: list | None = None,
         description: str | None = None,
         stars: str | None = None,
     ):
+        if not schedules:
+            schedules = []
         self.title = title
         self.director = director
         self.release_year_date = release_year_date
